@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1092334960682",
+    "project_id": "com-stral-dbldwn",
+    "storage_bucket": "com-stral-dbldwn.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092334960682:android:71ce6a0f683c69df7f0353",
+        "android_client_info": {
+          "package_name": "com.stral.dbldwn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHkN1l35bTRT_pr7oG99d3YqIsPQfEHew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
