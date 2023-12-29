@@ -22,18 +22,8 @@ object FirebaseUtil {
                 if (task.isSuccessful) {
                     val updated = task.result
                     Log.d("TAG", "Config params updated: $updated")
-                    Toast.makeText(
-                        activity,
-                        "Fetch and activate succeeded",
-                        Toast.LENGTH_SHORT,
-                    ).show()
                     result(remoteConfig)
                 } else {
-                    Toast.makeText(
-                        activity,
-                        "No internet connection",
-                        Toast.LENGTH_SHORT,
-                    ).show()
                     result.invoke(null)
                 }
             }

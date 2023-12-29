@@ -17,7 +17,7 @@
             android:name=".NotAGameActivity"
             android:exported="false" />
         <activity
-            android:name=".GameActivity"
+            android:name=".game.GameActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
