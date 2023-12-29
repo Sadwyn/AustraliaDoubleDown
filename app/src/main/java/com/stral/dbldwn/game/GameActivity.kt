@@ -56,7 +56,7 @@ class GameActivity : AppCompatActivity(), GameInterface, MenuDialogListener {
                 .apply {
                     x = 0f
                     y = kangaroo.y.toFloat()
-                    setBackgroundResource(R.drawable.kangaroo_left)
+                    setBackgroundResource(kangaroo.imageRes)
                 }
 
             kangarooView.layoutParams = layoutParams

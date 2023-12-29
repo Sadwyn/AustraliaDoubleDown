@@ -1,6 +1,9 @@
 package com.stral.dbldwn.game
 
-class Kangaroo {
-    var x = 0
-    var y = 0
-}
+import com.stral.dbldwn.R
+
+class Kangaroo(
+    var x: Int = 0,
+    var y: Int = 0,
+    var imageRes: Int = R.drawable.cang3
+)
