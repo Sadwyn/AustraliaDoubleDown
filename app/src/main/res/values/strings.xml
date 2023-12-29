@@ -81,6 +81,6 @@
                 "Protect against legal liability\n" 
                 "Security of Your Personal Data\n" 
                 "The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security."</string>
-    <string name="game_rules_message">Its a game with running kangaroos through the desert. You should click on them before they reach the end of the desert</string>
+    <string name="game_rules_message">Its a game with running kangaroos through the desert. You should click on them before they reach the end of the desert. \n\n\n\n\n Enjoy and Have fun!</string>
     <string name="game_rules_title">Game Rules</string>
 </resources>

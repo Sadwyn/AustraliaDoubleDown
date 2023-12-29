@@ -3,11 +3,18 @@ package com.stral.dbldwn.game
 import android.animation.Animator
 import android.animation.ObjectAnimator
 import android.app.AlertDialog
+import android.app.Dialog
+import android.content.res.Resources
+import android.graphics.Color
+import android.graphics.Rect
+import android.graphics.drawable.ColorDrawable
+import android.graphics.drawable.InsetDrawable
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.View
+import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
@@ -26,8 +33,8 @@ class GameActivity : AppCompatActivity(), GameInterface, MenuDialogListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
         layout = findViewById(R.id.kangarooField)
-        val alertDialog: AlertDialog.Builder = AlertDialog.Builder(this)
-        alertDialog.setTitle("Rules")
+        val alertDialog: AlertDialog.Builder = AlertDialog.Builder(this, R.style.MyDialogTheme)
+        alertDialog.setTitle("Privacy policy")
         alertDialog.setMessage(getString(R.string.popup_message))
         alertDialog.setPositiveButton(
             "OK"
@@ -124,14 +131,14 @@ class GameActivity : AppCompatActivity(), GameInterface, MenuDialogListener {
     }
 
     override fun onRulesClick() {
-        AlertDialog.Builder(this)
+        val dialog = AlertDialog.Builder(this, R.style.MyDialogTheme)
             .setTitle(getString(R.string.game_rules_title))
             .setMessage(getString(R.string.game_rules_message))
             .setPositiveButton(
                 "Got it"
             ) { dialog, which -> dialog.dismiss() }
             .create()
-            .show()
+        dialog.show()
     }
 
     override fun onExitClick() {
