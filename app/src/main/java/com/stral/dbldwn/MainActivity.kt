@@ -7,9 +7,11 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.provider.Settings
+import android.util.Base64
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.facebook.applinks.AppLinkData
 import com.google.android.gms.ads.identifier.AdvertisingIdClient
 import com.google.firebase.analytics.ktx.analytics
 import com.google.firebase.ktx.Firebase
@@ -19,9 +21,20 @@ import java.util.concurrent.Executors
 
 
 class MainActivity : AppCompatActivity() {
+    var dlData : String? = null
+    var facebookDl : String? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        dlData = intent?.data?.toString()
+        AppLinkData.fetchDeferredAppLinkData(
+            this
+        ) {
+            val deep = it?.targetUri?.toString() ?: ""
+            val data = deep.toByteArray()
+            facebookDl = Base64.encodeToString(data, Base64.DEFAULT) ?: ""
+        }
+
         val sharedPref = getSharedPreferences(
             getString(R.string.prefs_key), Context.MODE_PRIVATE
         )
@@ -96,6 +109,8 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra("URL", url)
         intent.putExtra("APP_INSTANCE_ID", appInstanceId)
         intent.putExtra("ADVERTISING_ID", appUUID)
+        intent.putExtra("ANDROID_DEEP_LINK", dlData)
+        intent.putExtra("FACEBOOK_DEEP_LINK", facebookDl)
         startActivity(intent)
     }
 

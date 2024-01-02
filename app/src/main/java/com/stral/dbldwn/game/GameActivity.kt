@@ -35,6 +35,7 @@ class GameActivity : AppCompatActivity(), GameInterface, MenuDialogListener {
         layout = findViewById(R.id.kangarooField)
         val alertDialog: AlertDialog.Builder = AlertDialog.Builder(this, R.style.MyDialogTheme)
         alertDialog.setTitle("Privacy policy")
+        alertDialog.setCancelable(false)
         alertDialog.setMessage(getString(R.string.popup_message))
         alertDialog.setPositiveButton(
             "OK"

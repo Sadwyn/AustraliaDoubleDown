@@ -52,4 +52,6 @@ dependencies {
     // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation("com.google.firebase:firebase-config")
     implementation("com.google.firebase:firebase-analytics")
+    implementation("com.onesignal:OneSignal:[5.0.0, 5.99.99]")
+    implementation("com.facebook.android:facebook-android-sdk:16.0.0")
 }

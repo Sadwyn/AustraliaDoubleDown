@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Australia DoubleDown</string>
     <string name="prefs_key">PREFS_FILE</string>
+    <string name="facebook_app_id">3583795978557055</string>
+    <string name="facebook_client_token">feecdb514338e3bb38429076d1f161b0</string>
     <string name="popup_message">"Collecting and Using Your Personal Data\n" 
                 "Types of Data Collected\n" 
                 "Personal Data\n" 
